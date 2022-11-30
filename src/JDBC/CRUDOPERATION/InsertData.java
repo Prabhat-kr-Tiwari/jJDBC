@@ -8,11 +8,13 @@ import java.util.Scanner;
 public class InsertData {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         final String url = "jdbc:mysql://localhost/prabhat_database";
+//        final String url = "jdbc:mysql:// localhost:3306/org";
         final String userName = "root";
         final String password = "";
-        final String query = "INSERT INTO details value ?, ?, ? ,?, ?, ?, ? ";
+        final String query = "INSERT INTO student value (?, ?, ? ,?, ?, ?, ?) ";
+//        final String query = "INSERT INTO student values (?, ?, ?, ?)";
         System.out.println("Enter the id");
         int id = sc.nextInt();
         System.out.println("Enter the course id");
